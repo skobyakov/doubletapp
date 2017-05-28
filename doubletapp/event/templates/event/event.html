@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <title>Event</title>
-    <link rel="stylesheet" href="{{url_for('event.static', filename='event.css')}}">
+    <link rel="stylesheet" href="{{url_for('event_page.static', filename='event.css')}}">
 </head>
 <body>
 <div class="wrapper">
@@ -13,7 +13,7 @@
             <div class="organizer">{{ params.organizer }}</div>
             <div class="event_title">{{ params.title }}</div>
         </div>
-        <img src="{{url_for('event.static', filename='follow.PNG')}}" alt="visit button" class="visit_button">
+        <img src="{{url_for('event_page.static', filename='follow.PNG')}}" alt="visit button" class="visit_button">
     </header>
     <div class="about"><p>{{ params.description }}</p></div>
     <h2>Activity details:</h2>

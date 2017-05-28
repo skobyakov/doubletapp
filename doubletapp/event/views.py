@@ -4,7 +4,7 @@ import requests
 import base64
 
 
-event_page = Blueprint('event', __name__,
+event_page = Blueprint('event_page', __name__,
                        template_folder='templates',
                        static_folder='static')
 
