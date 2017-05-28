@@ -1,8 +1,12 @@
-from flask import render_template, abort
-from doubletapp import app
+from flask import render_template, abort, Blueprint
 from .models import Event
 import requests
 import base64
+
+
+event_page = Blueprint('event', __name__,
+                       template_folder='templates',
+                       static_folder='static')
 
 
 def encode_to_base64(data):
@@ -44,9 +48,9 @@ def extract_event_from_db(oid):
     return result
 
 
-@app.route('/event/<event_oid>/')
+@event_page.route('/<event_oid>/')
 def event(event_oid):
     e = extract_event_from_db(event_oid)
     if len(e) == 0:
         abort(404)
-    return render_template('event.html', params=e)
+    return render_template('event/event.html', params=e)
