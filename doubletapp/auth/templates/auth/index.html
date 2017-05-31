@@ -1,0 +1,12 @@
+<!DOCTYPE html>
+<html>
+    <body>
+        <div>
+                Welcome anonymous user!
+                <a href="{{ url_for('admin_auth_page.login_view') }}">Login</a>
+        </div>
+        <div>
+            <a href="{{ url_for('admin.index') }}">Go to admin!</a>
+        </div>
+    </body>
+</html>
