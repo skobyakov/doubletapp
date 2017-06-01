@@ -8,8 +8,7 @@ manager = Manager(app)
 
 
 @manager.command
-def runserver(port):
-    print(port)
+def runserver():
     app.run(host='127.0.0.1', port=8080)
 
 

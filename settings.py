@@ -9,6 +9,12 @@ MONGODB_SETTINGS = {
     'port' : 27017
 }
 
+DOMAIN = {
+    'Advertising Companies' : {
+
+    }
+}
+
 CSRF_ENABLED = True
 
 

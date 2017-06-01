@@ -1,10 +1,10 @@
 from flask import Flask
 from flask_mongoengine import MongoEngine, MongoEngineSessionInterface
 from flask_login import LoginManager
+from eve import Eve
 
 
-app = Flask(__name__)
-app.config.from_object('config')
+app = Eve(__name__)
 db = MongoEngine(app)
 app.session_interface = MongoEngineSessionInterface(db)
 login_manager = LoginManager()

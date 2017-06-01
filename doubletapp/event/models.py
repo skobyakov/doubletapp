@@ -49,3 +49,4 @@ class AdvertisingCompany(db.Document):
 
 Icon.register_delete_rule(Event, 'icons', 1)
 User.register_delete_rule(AdvertisingCompany, 'audience', 1)
+Event.register_delete_rule(AdvertisingCompany, 'event', 1)
